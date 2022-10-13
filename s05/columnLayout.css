@@ -1,0 +1,32 @@
+
+
+div {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.div1 {
+    border: 2px solid rgb(0, 0, 0);
+    width: 200px;
+    height: 625px;
+    margin: 0 60px 0 60px;
+}
+.div2 {
+    border: 2px solid rgb(210, 15, 15);
+    width: 200px;
+    height: 625px;
+    margin: 0 60px 0 60px;
+}
+
+.div3 {
+    border: 2px solid rgb(0, 136, 255);
+    width: 200px;
+    height: 625px;
+    margin: 0 60px 0 60px;
+}
+.div4 {
+    border: 2px solid rgb(0, 255, 55);
+    width: 200px;
+    height: 625px;
+    margin: 0 60px 0 60px;
+}

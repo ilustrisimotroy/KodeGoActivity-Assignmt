@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');</style>
+    <link rel="stylesheet" href="style.css/ServiceReqStyle.css">
+    <title>Service Request Page</title>
+</head>
+<body>
+
+    <!-- Container Form -->
+    <div class="center">
+        <!-- Title of the Form -->
+        <h1>ABC Company IT Support Request Form</h1>
+        <form action="#">
+
+            <!-- Input boxes -->
+            <div class="user_details">
+                <div class="input_box">
+                    <label for="fName">First Name</label>
+                    <input type="text" name="fName" id="fName" required>
+                </div>
+
+                <div class="input_box">
+                    <label for="lName">Last Name</label>
+                    <input type="text" name="lName" id="lName" required>
+                </div>
+                <div class="input_box">
+                    <label for="emailAddress">Email Address</label>
+                    <input type="email" name="emailAddress" id="emailAddress" required>
+                </div>
+                <div class="input_box">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" name="contact" id="contact" required>
+                </div>
+                <div class="details">
+                      <input type="radio" id="radio" name="fav_language" value="onsite">
+                      <label for="radio">Onsite</label>
+                      <input type="radio" id="css" name="fav_language" value="WFH"  style="margin-left: 20px;">
+                      <label for="css">Work From Home</label>
+                </div>
+            </div>
+            <div class="location">
+                <span style="font-weight: 700;">Location:</span>
+                <p>For onsite, Please state your Workstation No., Department, Floor and Building </p>
+                <p>For work from home, Please complete your address and include a landmark nearest to your location.</p>
+                    <input type="text" name="" id="" required>
+                    Service Request Type :
+                    <div class="custom-select">
+                        <select name="" id="">
+                            <option value="1">-- Select your option --</option>
+                            <option value="2">Desktop / Laptop Setup</option>
+                            <option value="3">Desktop / Laptop Support</option>
+                            <option value="4">Desktop / Laptop Maintenance</option>
+                            <option value="5">Software Support</option>
+                            <option value="6">Computer Peripheral Setup</option>
+                            <option value="7">Computer Peripheral Troubleshooting</option>
+                            <option value="8">Computer Peripheral Maintenance</option>
+                        </select>
+                    </div>
+                    Request Decription :
+                    <!-- Text Area -->
+                    <div>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Explain your service request as details as possible."></textarea>
+                    </div>
+            </div>
+            <p style="font-weight: 700;">
+                Upload a picture screenshot for reference: 
+                <input type="file">    
+            </p>
+            <!-- Buttons -->
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset" value="Reset">Reset</button>
+            <button onclick="tablePage()" type="reset" value="Go to Tables" style="float: right;">Go To Tables</button>
+
+        </form>
+    </div>
+
+    <script>
+        // Go to table function button
+        function tablePage() {
+                    window.location = "TablePage.html"; // Redirecting to other page.
+                }
+    </script>
+</body>
+</html>

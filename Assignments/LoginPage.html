@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');</style>
+    <link rel="stylesheet" href="style.css/LoginStyle.css">
+
+    <!-- Title of the Page -->
+    <title>LOGIN FORM PAGE</title>
+</head>
+<body>
+
+    <!-- Login HTML -->
+    <div class="center">
+        <h1>LOGIN</h1>
+        <form action="ServiceRequestPage.html">
+            <div class="txt_field">
+                <input type="text" name="uName" id="user" required>
+                <span></span>
+                <label for="uName">Username</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="password" name="Pass" id="pass" required>
+                <span></span>
+                <label for="Pass">Password</label>
+            </div>
+            <!-- Call function in Javascript -->
+            <button onclick="myFunction()" type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <script>
+
+        // Function for the login process (*Kung mali ang password or input na ni lagay sa Username at Password mag message cia na "Please try again.")
+        function myFunction(){
+            var username = document.getElementById("user").value;
+            var password = document.getElementById("pass").value;
+                if ( username == "admin" && password == "admin#123"){
+                alert ("Thank you for logging in");
+                    window.location = "ServiceRequestPage.html"; // Redirecting to other page.
+                    return false;
+                } else {
+                    alert ("Please try again");
+                }
+        }
+    </script>
+</body>
+</html>

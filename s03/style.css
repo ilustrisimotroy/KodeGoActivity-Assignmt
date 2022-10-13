@@ -1,0 +1,59 @@
+<<<<<<< HEAD
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+ol {
+    background-color: rgb(140, 255, 95);
+}
+
+img {
+    border-radius: 50%;
+    width: 20%;
+    height: 20%;
+}
+
+li {
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul > li {
+    letter-spacing: 25px;
+=======
+h1 {
+    color: crimson;
+}
+
+/* ID Selector */
+#title-1 {
+    color: rgb(19, 209, 252);
+}
+
+/* Class Selector */
+.title-2 {
+    color: rgb(182, 41, 185);
+    text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+    .screen {
+        background-color: pink;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .screen {
+        background-color: blue;
+    }
+>>>>>>> 4c95d8c995a14df5fac7d06e06083a4e56275c70
+}
