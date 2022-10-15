@@ -1,32 +1,41 @@
 
 
 div {
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
 }
 
 .div1 {
     border: 2px solid rgb(0, 0, 0);
-    width: 200px;
-    height: 625px;
+    width: 15rem;
+    height: 50rem;
     margin: 0 60px 0 60px;
+    padding: 12px;
+    text-align: center;
 }
+
 .div2 {
     border: 2px solid rgb(210, 15, 15);
-    width: 200px;
-    height: 625px;
+    width: 15rem;
+    height: 50rem;
     margin: 0 60px 0 60px;
+    padding: 12px;
+    text-align: center;
 }
 
 .div3 {
     border: 2px solid rgb(0, 136, 255);
-    width: 200px;
-    height: 625px;
+    width: 15rem;
+    height: 50rem;
     margin: 0 60px 0 60px;
+    padding: 12px;
+    text-align: center;
 }
 .div4 {
     border: 2px solid rgb(0, 255, 55);
-    width: 200px;
-    height: 625px;
+    width: 15rem;
+    height: 50rem;
     margin: 0 60px 0 60px;
+    text-align: center;
+    padding: 12px;
 }
