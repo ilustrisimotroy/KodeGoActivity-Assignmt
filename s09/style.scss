@@ -1,0 +1,9 @@
+@mixin colors ($colors:blanchedalmond)
+{
+    background-color: $colors;
+    border: 5px;
+}
+
+.table {
+    @include colors;
+}
