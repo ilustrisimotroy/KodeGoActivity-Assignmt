@@ -1,9 +1,32 @@
 @mixin colors ($colors:blanchedalmond)
 {
     background-color: $colors;
-    border: 5px;
+    border: 3px;
 }
 
 .table {
     @include colors;
+}
+
+@mixin theme ($theme:DarkGray) {
+    background: $theme;
+    box-shadow: 0 0 1px rgba($theme);
+    color: #fff;
+}
+
+.text-primary {
+    @include theme;
+}
+
+// Defines two mixins in the arguments
+@mixin bordered($colors, $width) {
+    border: $width solid $colors;
+}
+
+.myActicle {
+    @include bordered(blue, 1px);
+}
+
+.myNotes {
+    @include bordered(red, 2px)
 }

@@ -1,0 +1,103 @@
+/* 
+    What does  mixin do?
+    = Avoid writing media query over and over again.
+    = Provides Semantic Media Query mixin on the following
+
+    1. Respond Above XX
+    2. Respond Below XX
+    3. Respond Between XX and XX
+
+    Whereas 
+    = XX is the two letter of the bootstrap breakpoints
+
+    Usual Way
+    @media (min-width: 760px) and (max-width: 991px) 
+    {
+        Target devices between 768 to 991
+    }
+*/
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+// This breakpoints are customizable via SaSS
+// This means the breakpoint values are only ever written once
+
+
+/* How to access these breakpoint values?
+    = By using map-get function
+*/
+
+$breakpoint: map-get($breakpoints, sm); //Get the small breakpoint
+$breakpoint: map-get($breakpoints, md);
+$breakpoint: map-get($breakpoints, lg);
+$breakpoint: map-get($breakpoints, xl);
+$breakpoint: map-get($breakpoints, xxl);
+
+
+/* 
+    Before writing the media query the good idea is to check if the key exist in the breakpoints in the bootstrap
+
+    How do we use this?
+        = map-has-key function
+*/
+
+@mixin respond-above ($breakpoint) {
+    //If the breakpoint exists in the map
+    @if map-has-key($breakpoints, $breakpoint)
+    {
+        //Get the breakpoint value
+        $breakpoint-value:map-get($breakpoint, $breakpoints);
+
+        //Write the media query
+        @media (min-width: $breakpoint-value) {
+            @content
+        }
+    } else {
+        @warn 'Invalid breakpoint: #($breakpoint).';
+    }
+}
+
+@include respond-above(sm) {
+    .card {
+        display: block;
+    }
+}
+
+/*
+    The reason why we do the method above is because  we can pass a value to the reposnd-above mixin in the form of a Bootstrap breakpoint
+
+    @warn discriptive - used when the breakpoint does not exist in the map.
+        = without this method, media query won't show up in your compiled CSS and you will have no idea
+*/
+
+@mixin respond-below($breakpoint) {
+    // If the breakpoint exist in the map 
+    @if map-has-key($breakpoints, $breakpoint) {
+        //Get the breakpoint value
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        //Write the media query
+        @media (max-width($breakpoint-value - 1)) {
+            @content
+        }
+    } @else {
+        @warn 'Invalid Breakpoint: #($breakpoint)';
+    }
+}
+
+@include respond-below(lg) {
+    .card {
+        display: block;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+}

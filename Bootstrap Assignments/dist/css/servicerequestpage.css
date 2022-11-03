@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  background-color: #fff;
+  height: 645px;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.card h1 {
+  font-size: 20px;
+  margin-top: -40px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+.card .row {
+  padding: 0 0 0 5px;
+  margin-top: -40px;
+}
+.card .row label {
+  font-size: 15px;
+  margin-bottom: -50px;
+  margin-top: 10px;
+}
+.card .row2 {
+  padding: 40px 0 0 5px;
+  margin-top: -40px;
+}
+.card .details {
+  padding: 0 5px 0 5px;
+  margin-top: 10px;
+}
+.card .details .form-check {
+  margin: 1px 20px 0 0;
+}
+.card .details label {
+  font-size: 14px;
+}
+.card .location h6 {
+  padding: 9px 0 0 5px;
+  font-size: 15px;
+}
+.card .location p {
+  font-size: 12px;
+  padding: 0 0 0 5px;
+}
+.card .location input {
+  margin: -7px 0 0px 0;
+}
+.card .form-label {
+  font-size: 14px;
+  margin: 10px 0 5px 0;
+}
+.card .form-select {
+  margin-bottom: -5px;
+}
+.card .txtArea {
+  height: 76px;
+}
+.card .button_row {
+  margin-top: -5px;
+}
+.card .button_row .btn-success {
+  padding: 7px 55px;
+}
+.card .button_row .btn-danger {
+  float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 100%;
+  }
+}/*# sourceMappingURL=servicerequestpage.css.map */
