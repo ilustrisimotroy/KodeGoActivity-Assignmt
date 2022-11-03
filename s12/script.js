@@ -82,5 +82,13 @@ console.log(myCopy);
 let option1 = null;
 console.log(option1);
 
+// we do not apply number first before a word
+
+// We can use a special character before word when a variable.
+// There are some chraracters that do not work for assigning a variable. like(!@#%^);
 let $option2 = null;
 console.log($option2);
+
+let $_year = 2023;
+console.log($_year);
+//2 speicial characters are working before a word.
