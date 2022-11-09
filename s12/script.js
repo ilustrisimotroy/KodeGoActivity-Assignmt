@@ -77,7 +77,7 @@ console.log(typeof isPresent);
 
 let myCopy;
 console.log(myCopy);
-//undefine is the output there is no value assigned into it.
+//undefined is the output there is no value assigned into it.
 
 let option1 = null;
 console.log(option1);
@@ -92,3 +92,89 @@ console.log($option2);
 let $_year = 2023;
 console.log($_year);
 //2 speicial characters are working before a word.
+
+let state = `Washington`;
+//Backticks are working but for String only.
+
+//Object
+let person = {
+    //Property: Value
+    // Key value pair
+
+    name: "Jose Rizal", 
+    age: 30,
+    address: "Calamba, Laguna",
+    isDoctor: true,
+    spouse: null,
+    siblings: [
+        "Paciano",
+        "Saturnina",
+        "Lucia",
+        "Tinidad",
+        "Narcisa",
+        "Soledad",
+        "Olympia",
+        "Concepcion",
+        "Maria",
+        "Josefa"
+    ]
+};
+
+console.log(person);
+console.log(person.name - person.spouse);
+console.log(person.siblings[5]);
+
+
+let fruits = [
+    "mango",
+    "apple",
+    "watermelon",
+    "kiwi",
+    "rambutan"
+];
+
+console.log(fruits);
+console.log(fruits.length); // Displays the array's length
+
+
+//Function
+    //Function Declaration
+    //Function keyword
+    //Function name and parenthesis (holds the parameters)
+    //Curly braces - detemine its block of codes, statements are written inside this code block.
+
+function greeting(firstName, lastName) 
+    //greeting - user defined function name
+    //(variables inside the parenthesis) - user defined parameters
+    //parameters are also know as arguments, properties or attributes.
+    //parameters are name varible passed into a function.
+    //imports arguments in the function.
+{
+    console.log(`My name is ${firstName}, ${lastName}, it was nice to meet you`);
+}
+
+greeting("Gerard", "Way")// Invoke function calls
+greeting("Chester", "Bennington");
+
+//Using a return statement
+function product (a, b) {
+    console.log("Product");
+    return(a*b); // Stops the execution of a function and returns a value.
+}
+
+console.log(product(2,4));
+
+
+function average(a, b ) {
+    console.log("Average");
+    return(a + b);
+}
+
+console.log(average(10, 5) / 3);
+
+function convertion(a) {
+    console.log("Covertions");
+    return(a / 1000);
+}
+
+console.log(convertion(20));
