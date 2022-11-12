@@ -176,4 +176,111 @@ console.log(false == 0); //OUTPUT - TRUE
 console.log(false == 1); //OUTPUT - FALSE
 console.log(4.00 == 4); //OUTPUT - TRUE
 
-//COERSION - IMPLICIT
+//COERSION - IMPLICIT / AUTOMATIC CONVERSION OF VALUES FROM ONE DATA TYPE TO ANOTHER
+
+
+//PARSEINT() - CONVERTED INTO WHOLE NUMBERS
+//PARSEFLOAT() - USED FOR DECIMAL NUMBERS
+
+let ex = 75.68;
+console.log(parseInt("75.68"));
+console.log(parseFloat("75.68"));
+console.log(parseInt("75.68").toFixed(2)); //.toFixed(2) - diplay the decimal places
+console.log(parseFloat(ex.toFixed(2)));
+
+
+//STRICT EQUALITY OPERATORY ( === ) = DOESN'T PRACTICE COERCION
+    // - COMPARES "SAMENESS OF VALUE"
+console.log(1 === 1);
+console.log(5 === "5");
+console.log(true === 1);
+console.log(null === undefined);
+        // Null / null = INTENTIONAL ABSENSE OF ANY OBJECT VALUE
+        // Undefined = Doesn't assigned
+
+console.log("James" === "Daniel"); // - SAMENESS OF VALUE IS PRACTICED IN STRICT EQUALITY OPERATOR
+console.log(true === true);
+console.log(false === false);
+
+//INEQUALITY OPERATOR ( != (KNOWS AS LOOSE INEQUALITY OPERATOR)) = COMPARES DIFFERENCE OF VALUES REGARDLESS OF DATA TYPES
+    // = COERSION WILL TAKE PLACE
+
+console.log(false != true);
+console.log(false != false);
+console.log(3 != 3.00);
+console.log(null != undefined);
+console.log(true != 1); 
+
+//STRICT INEQUALITY OPERATOR ( !== ) = DATA TYPES AND DIFFERENCE ANY VALUES
+    // = IT DOESN'T TAKE COERSION
+
+console.log(false !== true); //true
+console.log(4 !== 4.00);
+console.log(null !== undefined);
+console.log(true !== 1); 
+
+//GREATER THAN ( > (MALAKI BA) )
+console.log(100 > 75);
+console.log(70 > 180);
+
+//LESS THAN ( < (MALIIT BA) )
+console.log(45 < 50);
+console.log(67 < 45);
+
+//GREATER THAN OR EQUAL TO ( >= )
+console.log(45 >= 45); //true
+console.log(44 >= 45); //false
+
+//LESS THAN OR EQUAL TO ( <= )
+console.log(100 <= 100);
+console.log(1 <= 0.5);
+
+/* LOGICAL OPERATOR */
+    
+//AND ( && ) OPERATOR - WHEN THERE IS FALSE IN THE STATEMENT IT SET AS FALSE
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+
+console.log("Max == Max" && (undefined == null));
+
+
+let kei = true;
+console.log(kei > 2 && kei < 2); //FALSE
+
+let isOnline = true;
+let isBoss = false;
+let chatSiBoss = isOnline && isBoss;
+console.log(chatSiBoss);
+//BEST PRACTICE TO DECLARE A BOOLEAN USE THE WORD "is" BEFORE THE GIVEN WORD
+
+
+//OR OPERATOR ( || ) = IT EVALUATES TO TRUE OF EITHER OF THE OPERAND IS TRUE.
+    // - IF BOTH OPERAND IS FALSE THE RESULT IS FALSE.
+
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+//NOT OPERATOR - KABALIKTARAN
+console.log(!true);
+console.log(!false);
+
+let isAdmin = true;
+let isInstructor = "1";
+let isAnswer = !isAdmin === isInstructor;
+console.log(isAnswer);
+
+
+let faveNum = 333;
+let chooseNum = 245;
+let isHigher = !(chooseNum > faveNum || faveNum >= chooseNum);
+console.log(isHigher);
+
+
+let isTrue = true;
+let isFalse = false;
+
+let isTralse = !(!isFalse != !isFalse && isFalse !== isTrue || (!isTrue != !isFalse && isFalse != !isTrue)); //OUTPUT - True
