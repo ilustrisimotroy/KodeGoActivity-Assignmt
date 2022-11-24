@@ -306,16 +306,16 @@
             -Calcute the weight based on the user input in kilograms(kg).
             -Create a function that displays the converted weight in pounds.
             -Execute the function property based on the initialized object with arguments.
-*/
 
+    
+    Answer 1:
 
-
-class Weight {
+    class Weight {
     constructor(yourName, yourKilo) {
         this.name = yourName;
         this.kilogram = yourKilo;
+        }
     }
-}
 
     const getKg = new Weight();
     getKg.name = "Jelly";
@@ -329,3 +329,35 @@ class Weight {
         }
 
         console.log(theWeight());
+
+    Answer 2:
+
+        class Weight {
+            constructor (name, kg) {
+                this.name = name;
+                this.kilograms = kg;
+                this.pounds = kg * 2.2;
+                this.convertedWeight = function() {
+                    console.log(`${this.name}'s weight in lbs is ${this.pounds}`);
+                }
+            }
+        }
+
+        let poundsWeight = new Weight("Jelly", 60);
+*/
+
+class Weight {
+    constructor (name, kg) {
+        this.name = name;
+        this.kilograms = kg;
+        this.pounds = kg * 2.2;
+        this.convertedWeight = function() {
+            console.log(`${this.name}'s weight in lbs is ${this.pounds}`);
+        }
+    }
+}
+
+let poundsWeight = new Weight("Jelly", 60);
+poundsWeight.convertedWeight();
+
+
