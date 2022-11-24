@@ -51,7 +51,11 @@ deleteBtn.addEventListener("click", () => {
     let div = document.getElementById("delete-checkbox");
     for(let item of checkBox) {
         if (item.checked == true) {
-            item.parentElement.remove(div);
+            let msg = confirm (`Are you sure that you want to delete \n ${item.parentElement.innerText}`);
+            if(msg == true) {   
+                item.parentElement.remove(div);
+            }
+            // 
         }
     }
 })
